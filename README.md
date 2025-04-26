@@ -1,6 +1,6 @@
 # LeaveSystem - Application de Gestion des Congés en Java
 
-**LeaveSystem** est une application de bureau développée en Java avec Swing et JDBC, permettant d'automatiser la gestion des demandes de congés des employés au sein d'une entreprise : gestion des employés, demandes de congés, approbations, authentification sécurisée et historique des actions.
+**LeaveSystem** est une application développée en Java avec Swing et JDBC, permettant d'automatiser la gestion des demandes de congés des employés au sein d'une entreprise : gestion des employés, demandes de congés, approbations, authentification sécurisée et historique des actions.
 
 ---
 
@@ -33,24 +33,34 @@ LeaveSystem/
 ---
 
 ## 📷 Aperçu des interfaces
+### 🔑 Page d'acceuil
+  ![Login](media/image24.jpg)
 
 ### 🔑 Interface de connexion
 - Authentification sécurisée pour employés et administrateurs
 - Validation des identifiants dans MySQL
-  ![Login](media/image24.jpg)
+  ![Login](media/image25.jpg)
 
 ### 🧑‍💼 Interface Employé
 - Visualiser les types de congés disponibles
 - Consulter le solde restant
 - Soumettre une nouvelle demande de congé
 - Imprimer ses demandes
-
+  ![Login](media/image34.jpg)
+  ![Login](media/image35.jpg)
+  ![Login](media/image36.jpg)
 ### 🛠 Interface Administrateur
 - Gérer les employés (ajout, édition, suppression)
 - Valider ou rejeter les demandes de congés
 - Impression des listes d'employés et des congés validés
 - Envoi automatique d'email après décision
-
+-   ![Login](media/image60.jpg)
+   ![Login](media/image41.jpg)
+   ![Login](media/image43.jpg)
+   ![Login](media/image52.jpg)
+  ![Login](media/image64.jpg)
+  ![Login](media/image65.jpg)
+  ![Login](media/image68.jpg)
 ---
 
 ## 🎯 Fonctionnalités principales
