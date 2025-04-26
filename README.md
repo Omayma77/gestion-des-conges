@@ -1,176 +1,121 @@
-# 🏝️ LeaveManager - Système de Gestion des Congés en Java Swing
+# LeaveSystem - Application de Gestion des Congés en Java
 
-**LeaveManager** est une application desktop développée en Java avec **Swing** et **JDBC**, offrant une solution complète pour gérer les demandes de congés au sein d'une entreprise, depuis la soumission par les employés jusqu'à l'approbation par les administrateurs.
+**LeaveSystem** est une application de bureau développée en Java avec Swing et JDBC, permettant d'automatiser la gestion des demandes de congés des employés au sein d'une entreprise : gestion des employés, demandes de congés, approbations, authentification sécurisée et historique des actions.
 
 ---
 
 ## 📁 Structure du projet
 
 ```
-LeaveManager/
+LeaveSystem/
+├── build/
+│   ├── classes/
+│   │   ├── btn/          # Composants bouton personnalisés
+│   │   ├── com/          # Classes principales du projet
+│   │   ├── historique/   # Gestion des historiques de congés
+│   │   └── icon/         # Ressources d'icônes
+│   ├── empty/
+│   └── generated-sources/
+│       └── ap-source-output/
+├── DataBase/             # Scripts SQL et base de données
+├── dist/
+│   └── lib/              # Bibliothèques nécessaires à l'exécution
+├── nbproject/            # Fichiers de configuration NetBeans
+│   └── private/
 ├── src/
-│   ├── auth/               # Gestion de l'authentification
-│   ├── employees/          # Module employés
-│   ├── leave/              # Gestion des congés
-│   ├── admin/              # Panneau d'administration
-│   ├── config/             # Configuration (DB, email)
-│   ├── models/             # Classes métier
-│   └── utils/              # Utilitaires (PDF, calculs)
-├── database/               # Scripts SQL et schémas
-├── media/                  # Ressources graphiques
-├── docs/                   # Documentation technique
-└── README.md
+│   ├── btn/              # Code source des boutons
+│   ├── com/              # Code source principal de l'application
+│   ├── historique/       # Module d'historique des demandes
+│   └── icon/             # Images et icônes de l'interface
+└── test/                 # Dossier de tests unitaires
 ```
 
 ---
 
-## 📷 Aperçu des Interfaces
+## 📷 Aperçu des interfaces
 
-### 1. Interface de Connexion
-![Login](media/image18.png)
+### 🔑 Interface de connexion
+- Authentification sécurisée pour employés et administrateurs
+- Validation des identifiants dans MySQL
+  ![Login](C:\Users\HP\Downloads\Rapport1 (Omayma Harchich et Kawtar Gantouh)\Rapport1 (Omayma Harchich et Kawtar Gantouh)\word\media)
 
-Connexion sécurisée avec rôles distincts (employé/admin). Validation des identifiants via MySQL.
+### 🧑‍💼 Interface Employé
+- Visualiser les types de congés disponibles
+- Consulter le solde restant
+- Soumettre une nouvelle demande de congé
+- Imprimer ses demandes
 
----
-
-### 2. Tableau de Bord Employé
-![Dashboard Employé](media/image21.png)
-
-Visualisation du solde de congés, historique des demandes et bouton de nouvelle demande.
-
----
-
-### 3. Formulaire de Demande
-![Nouvelle Demande](media/image12.png)
-
-Saisie des dates, type de congé et motif. Calcul automatique de la durée.
-
----
-
-### 4. Panneau Administrateur
-![Admin Panel](media/image19.png)
-
-Gestion centralisée des demandes en attente avec options d'approbation/rejet.
-
----
-
-### 5. Gestion des Employés
-![Gestion Employés](media/image13.png)
-
-CRUD complet des employés avec impression de la liste au format PDF.
+### 🛠 Interface Administrateur
+- Gérer les employés (ajout, édition, suppression)
+- Valider ou rejeter les demandes de congés
+- Impression des listes d'employés et des congés validés
+- Envoi automatique d'email après décision
 
 ---
 
 ## 🎯 Fonctionnalités principales
 
-| Module                | Fonctionnalités                                                                 |
-|-----------------------|---------------------------------------------------------------------------------|
-| 🔐 Authentification   | Double système (employé/admin) avec email/mot de passe                          |
-| 📅 Gestion des Congés | Soumission, suivi, calcul automatique des soldes                                |
-| 👨‍💼 Employés         | Profils complets avec historiques de congés                                     |
-| 👩‍💼 Administration    | Approbation/rejet des demandes, notifications email, reporting                 |
-| 📊 Reporting          | Génération de PDF (demandes, listes d'employés)                                |
+| Module               | Fonctionnalités clés                                   |
+|----------------------|--------------------------------------------------------|
+| 🔐 Authentification   | Connexion sécurisée (email et mot de passe)            |
+| 🧑‍💼 Gestion Employés  | Ajouter, modifier, supprimer, rechercher employés     |
+| 🛫 Gestion Congés      | Soumettre, visualiser, approuver/rejeter des congés    |
+| 🖨 Impression          | Impression de listes et d'attestations                |
+| 📧 Notification Email | Envoi d'email après validation ou rejet de demande    |
 
 ---
 
 ## 🛠️ Technologies utilisées
 
-- **Java 11+** - Langage principal
-- **Swing** - Interface graphique
-- **JDBC** - Connexion à MySQL
-- **iTextPDF** - Génération de documents
-- **JavaMail** - Envoi de notifications
-- **JUnit** - Tests unitaires
-- **NetBeans IDE** - Environnement de développement
+- Java 8+
+- Swing – pour les interfaces graphiques
+- JDBC – pour la connexion MySQL
+- MySQL – base de données de gestion
+- XAMPP – serveur local (Apache + MySQL)
+- WebSwing – pour rendre l'application accessible via navigateur (optionnel)
+- NetBeans IDE
 
 ---
 
 ## ⚙️ Installation & Exécution
 
-### ✅ Prérequis
-- Java JDK 11+
-- MySQL 8.0+
-- NetBeans (optionnel)
+✅ **Prérequis :**
+- Java Development Kit (JDK)
+- Serveur XAMPP (MySQL actif)
+- NetBeans IDE
 
-### 🚀 Étapes d'installation
+🚀 **Étapes d'installation :**
 
-1. **Cloner le dépôt** :
 ```bash
-git clone https://github.com/votre-utilisateur/LeaveManager.git
-cd LeaveManager
+# Cloner le projet
+git clone https://github.com/Omayma77/gestion-des-conges.git
+cd gestion-des-conges
 ```
 
-2. **Initialiser la base de données** :
-```bash
-mysql -u root -p < database/leave_system.sql
-```
-
-3. **Configurer les accès** dans `src/config/DBConfig.java`
-
-4. **Lancer l'application** :
-```bash
-java -jar dist/LeaveManager.jar
-```
+- Importer le projet dans **NetBeans IDE**.
+- Configurer la base de données avec les scripts SQL depuis `/DataBase/`.
+- Lancer `Login.java` pour démarrer l'application.
 
 ---
 
-## 📄 Documentation Technique
+## 👩‍💻 Auteurs
 
-- **Diagrammes UML** :  
-  - Cas d'utilisation : `docs/use_case_diagram.png`  
-  - Modèle conceptuel : `docs/mcd.png`
-
-- **Tests** :  
-  ```bash
-  mvn test
-  ```
+- **Omayma Harchich**
+- **Kawtar Gantouh**
 
 ---
 
-## 👥 Équipe Projet
+## 📄 Licence
 
-**Kawtar GANTOUH**  
-📧 kawtar.gantouh@example.com  
-🔗 [GitHub](https://github.com/kawtar)
-
-**Omayma HARCHICH**  
-📧 omayma.harchich@example.com  
-🔗 [GitHub](https://github.com/omayma)
-
-**Encadrants** :  
-- Pr. Abdessadek AAROUD  
-- Pr. Khaoula CHERRAT  
-*Faculté des Sciences d'El Jadida*
-
----
-
-## 📜 Licence
-
-Projet sous licence **MIT** - Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Projet réalisé dans un cadre académique - Utilisation libre avec attribution.
 
 ---
 
 ## ✅ Conclusion
 
-**LeaveManager** modernise la gestion des congés avec :
-✔ Interface intuitive en français  
-✔ Automatisation des processus RH  
-✔ Système de notification intégré  
-✔ Rapports exportables  
+**LeaveSystem** propose une solution moderne et performante pour simplifier la gestion administrative des congés.  
+Ergonomique, rapide et fiable, il répond aux besoins des RH en matière d'organisation et de suivi du personnel.
 
-> 💡 Idées d'amélioration : Module mobile, synchronisation calendrier, tableau de bord analytique
+⭐ Pensez à noter ⭐ ou partager ce projet si vous le trouvez utile !
 
-```
-
-Points forts de ce README :
-1. **Structure claire** avec emojis pour une meilleure lisibilité
-2. **Capture d'écran intégrée** directement depuis votre rapport
-3. **Tableau récapitulatif** des fonctionnalités par module
-4. **Instructions d'installation** détaillées
-5. **Section équipe** professionnelle avec liens GitHub
-6. **Perspectives d'évolution** pour encourager les contributions
-
-Pour une optimisation maximale sur GitHub :
-1. Compressez les images dans `/media/` (utilisez [TinyPNG](https://tinypng.com/))
-2. Ajoutez un fichier `.gitignore` pour exclure les dossiers `build/` et `dist/`
-3. Créez un wiki GitHub avec la documentation technique complète
+---
