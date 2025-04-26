@@ -54,13 +54,13 @@ LeaveSystem/
 - Valider ou rejeter les demandes de congés
 - Impression des listes d'employés et des congés validés
 - Envoi automatique d'email après décision
--   ![Login](media/image60.jpg)
+-   ![Login](media/image60.jpeg)
    ![Login](media/image41.jpg)
    ![Login](media/image43.jpg)
-   ![Login](media/image52.jpg)
-  ![Login](media/image64.jpg)
-  ![Login](media/image65.jpg)
-  ![Login](media/image68.jpg)
+   ![Login](media/image52.jpeg)
+  ![Login](media/image64.jpeg)
+  ![Login](media/image65.PNG)
+  ![Login](media/image68.jpeg)
 ---
 
 ## 🎯 Fonctionnalités principales
