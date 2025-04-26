@@ -37,7 +37,7 @@ LeaveSystem/
 ### 🔑 Interface de connexion
 - Authentification sécurisée pour employés et administrateurs
 - Validation des identifiants dans MySQL
-  ![Login](C:\Users\HP\Downloads\Rapport1 (Omayma Harchich et Kawtar Gantouh)\Rapport1 (Omayma Harchich et Kawtar Gantouh)\word\media\image24.jpg)
+  ![Login](C:/Users/HP/Downloads/Rapport1 (Omayma Harchich et Kawtar Gantouh)/Rapport1 (Omayma Harchich et Kawtar Gantouh)/word/media/image24.jpg)
 
 ### 🧑‍💼 Interface Employé
 - Visualiser les types de congés disponibles
