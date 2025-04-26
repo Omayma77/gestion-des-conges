@@ -46,9 +46,9 @@ LeaveSystem/
 - Consulter le solde restant
 - Soumettre une nouvelle demande de congé
 - Imprimer ses demandes
-  ![Login](media/image34.jpg)
-  ![Login](media/image35.jpg)
-  ![Login](media/image36.jpg)
+  ![Login](media/image34.jpeg)
+  ![Login](media/image35.jpeg)
+  ![Login](media/image36.jpeg)
 ### 🛠 Interface Administrateur
 - Gérer les employés (ajout, édition, suppression)
 - Valider ou rejeter les demandes de congés
